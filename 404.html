@@ -1,0 +1,105 @@
+<html>
+  <meta charset="utf-8">
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="head">
+  BẠN ĐANG Ở NƠI KHÔNG TỒN TẠI TRONG HỆ THỐNG WEBSITE NÀY
+</div>
+
+<body>
+
+
+    <span>VUI</span>
+    <span>LÒNG</span>
+    <span>KIỂM</span>
+    <span>TRA</span>
+    <span>LẠI</span>
+    <span>ĐƯỜNG</span>
+    <span>LINK</span>
+    <span>BẠN</span>
+    <span>NHÉ</span>
+
+    <script src="app.js"></script>
+</body>
+<div class="footer">
+  <a href="../index.html">Trở về trang chủ</a>
+</div>
+</html>
+
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,500&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    padding:0;
+    margin:0;
+}
+.head{
+    text-align: center;
+    font-size: 45px;
+    color: #fff;
+    margin-top: 100px;
+    z-index: -1;
+    margin-bottom: 500px;
+    position: absolute;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background:#3da5d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+span {
+    font-size:30px;
+    margin:0px 10px;
+    font-weight: bold;
+    transition:color 0.2s;
+    cursor: pointer;
+}
+span::selection{
+    background: rgba(0,0,0,0.2);
+}
+.footer{
+  width: 100%;
+  
+  text-align: center;
+  margin-top: 400px;
+  position: absolute;
+  text-decoration: none; 
+  padding: 8px 0;
+  
+}
+.footer:hover{
+  background-color: #fff;
+  color: #73bfb8;
+}
+.footer a{
+  color: #000;
+  text-decoration: none;
+}
+.change-properties{
+    color:#fff;
+    text-shadow:0px 0px 10px white,0px 0px 15px white,0px 0px 20px white;
+}
+</style>
+
+<script>
+
+const list = document.querySelectorAll('span')
+var index = 0
+
+setInterval((e) => {
+  list.forEach((e) => {
+    e.classList.remove('change-properties')
+  })
+  list[index].classList.add('change-properties')
+  index++
+  if (index == list.length) {
+    index = 0
+  }
+},200)
+</script>
